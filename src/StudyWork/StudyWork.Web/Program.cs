@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using StudyWork.Web.Data;
 using Serilog;
+using StudyWork.Web.Infrastructure.Mappers.Base;
+using AutoMapper;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +27,10 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.Password.RequireUppercase = false;
     options.Password.RequireLowercase = false;
 });
+
+MapperRegistration.GetMapperConfiguration();
+
+builder.Services.AddAutoMapper(typeof(Program).Assembly);
 var app = builder.Build();
 using(var scope = app.Services.CreateScope())
 {

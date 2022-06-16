@@ -1,4 +1,4 @@
-namespace StudyWork.Web.Models
+namespace StudyWork.Web.ViewModels
 {
     public class ErrorViewModel
     {

@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using StudyWork.Web.Models;
+using StudyWork.Web.ViewModels;
 using System.Diagnostics;
 
 namespace StudyWork.Web.Controllers
